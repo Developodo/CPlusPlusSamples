@@ -6,9 +6,12 @@ class Complejo{
     public:
         int real;
         int imaginario;
-    Complejo(int r,int ima):real(r),imaginario(ima){}
+    Complejo(int r,int i):real(r),imaginario(i){}
     Complejo operator + (Complejo &a){
-       return Complejo(real+a.real,imaginario+a.imaginario);
+       Complejo res(0,0);
+       res.real=this->real+a.real;
+       res.imaginario=this->imaginario+a.imaginario;
+       return res;
     }
 };
 //4+3j
